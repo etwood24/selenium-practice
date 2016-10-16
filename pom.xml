@@ -18,5 +18,12 @@
         <groupId>org.seleniumhq.selenium</groupId>
         <artifactId>selenium-firefox-driver</artifactId>
         <version>3.0.0</version>
+
+        <dependency>
+            <groupid>junit</groupid>
+            <artifactid>junit</artifactid>
+            <version>4.9</version>
+            <scope>test</scope>
+        </dependency>
     </dependency>
 </project>
