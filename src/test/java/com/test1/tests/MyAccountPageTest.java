@@ -2,6 +2,7 @@ package com.test1.tests;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -13,12 +14,14 @@ import org.testng.annotations.Test;
  */
 public class MyAccountPageTest {
 
-    private WebDriver driver;
+    public WebDriver driver;
 
     @BeforeMethod
     public void beforeMethod()
     {
-        driver = new FirefoxDriver();
+        //System.setProperty("webdriver.firefox.marionette","/Users/evan/Selenium-Practice/geckodriver");
+        System.setProperty("webdriver.chrome.driver","/Users/evan/Selenium/chromedriver");
+        driver = new ChromeDriver();
         driver.manage().window().maximize();
     }
     @Test
@@ -38,6 +41,7 @@ public class MyAccountPageTest {
 
     @AfterMethod
     public void afterMethod()
+
     {
         driver.quit();
     }
